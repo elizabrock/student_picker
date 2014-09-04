@@ -2,7 +2,7 @@
   - @students.each do |student|
     %li
       = student.name
-      (never)
+      = formatted_last_called_at_for(student)
 
 = simple_form_for @student do |f|
   = f.input :name
