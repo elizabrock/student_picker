@@ -1,3 +1,10 @@
+- if @students.empty?
+  %p You must enter a student in order to begin using the app.
+- elsif Student.eligible_to_be_called.empty?
+  %p There are no students that haven't been called today.
+- else
+  = button_to "Pick Student", pick_students_path, method: :post
+
 %ul#student_list
   - @students.each do |student|
     %li

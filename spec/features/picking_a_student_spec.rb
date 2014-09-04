@@ -1,7 +1,4 @@
 feature "picking a student" do
-  background do
-    pending "implementation"
-  end
   scenario "if there are no students" do
     visit root_path
     page.should_not have_button "Pick Student"
@@ -19,6 +16,8 @@ feature "picking a student" do
     visit root_path
     click_button "Pick Student"
     page.should have_content("Bob has been picked")
+    current_path.should == root_path
+    page.should have_content("Bob (just now)")
   end
   scenario "if there are multiple eligible students" do
     Fabricate(:student, name: "Rose", last_called_at: 5.minutes.ago)

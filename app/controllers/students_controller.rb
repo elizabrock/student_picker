@@ -17,6 +17,12 @@ class StudentsController < ApplicationController
     end
   end
 
+  def pick
+    student = Student.pick!
+    flash.notice = "#{student.name} has been picked"
+    redirect_to root_path
+  end
+
   protected
 
   def load_students
