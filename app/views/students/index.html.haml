@@ -1,0 +1,9 @@
+%ul#student_list
+  - @students.each do |student|
+    %li
+      = student.name
+      (never)
+
+= simple_form_for @student do |f|
+  = f.input :name
+  = f.submit "Add Student"

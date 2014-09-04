@@ -30,4 +30,5 @@ group :test do
   gem 'launchy'
   gem 'poltergeist'
   gem 'pry-rails'
+  gem 'shoulda'
 end
