@@ -9,11 +9,11 @@ class StudentsController < ApplicationController
     student_params = params.require(:student).permit(:name)
     @student = Student.new(student_params)
     if @student.save
-      flash.notice = "#{@student.name} has been added to the list of students."
-      redirect_to root_path
+      flash.now[:notice] = "#{@student.name} has been added to the list of students."
+      @created_student = @student
+      @student = Student.new
     else
       flash.now[:alert] = "Student could not be created."
-      render :index
     end
   end
 

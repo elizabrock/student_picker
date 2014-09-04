@@ -1,0 +1,6 @@
+$('.notice').text('<%= notice %>');
+$('.alert').text('<%= alert %>');
+$('form#new_student').replaceWith("<%= escape_javascript(render partial: 'form') %>");
+<%- if @created_student.present? %>
+  $('ul#student_list').prepend("<%= escape_javascript(render partial: 'student', locals: {student: @created_student}) %>");
+<%- end %>

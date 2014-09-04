@@ -1,4 +1,4 @@
-feature "adding students" do
+feature "adding students", js: true do
   scenario "happy path" do
     visit root_path
     fill_in "Name", with: "Jim"
