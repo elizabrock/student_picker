@@ -2,6 +2,11 @@
 
 This was a one-day project that Cohort 5 of Nashville Software School went through.
 
+[![Build Status](https://travis-ci.org/elizabrock/student_picker.png?branch=master)](https://travis-ci.org/elizabrock/student_picker)
+[![Code Climate](https://codeclimate.com/github/elizabrock/student_picker.png)](https://codeclimate.com/github/elizabrock/student_picker)
+[![Code Climate](https://codeclimate.com/github/elizabrock/student_picker/coverage.png)](https://codeclimate.com/github/elizabrock/student_picker)
+
+
 ## Ruby version
 
 2.1.2

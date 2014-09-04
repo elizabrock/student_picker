@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - "2.1.2"
+addons:
+  postgresql: "9.3"
+before_script:
+  - cp config/database.yml.example config/database.yml
+  - psql -c 'create database student_picker_test;' -U postgres
+
+script: 'CODECLIMATE_REPO_TOKEN=fa3528edbb53cdfb7d2cd7674c478bca56215528e7a2f4acb24d342f93b7fc70 bundle exec rake'
