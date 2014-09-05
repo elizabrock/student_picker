@@ -23,6 +23,10 @@ None
 4. `rake db:migrate`
 5. Run the test suite: `rake`
 
+To run the server locally using unicorn:
+
+`bundle exec unicorn -p 3000 -c ./config/unicorn.rb`
+
 ## Deployment instructions
 
 _(Pending)_
